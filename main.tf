@@ -9,7 +9,7 @@ terraform {
 
 provider "aws" {
   region                   = "eu-central-1"
-  shared_credentials_files = ["/Users/mikolajsemeniuk/Projects/go-lambda/credentials"]
+  shared_credentials_files = ["./credentials"]
   profile                  = "default"
 }
 
@@ -30,7 +30,7 @@ resource "aws_iam_role" "lambda_role" {
 
 data "archive_file" "lambda_function" {
   type        = "zip"
-  source_dir  = "/Users/mikolajsemeniuk/Projects/go-lambda/bin"
+  source_dir  = "./bin"
   output_path = "main.zip"
 }
 
