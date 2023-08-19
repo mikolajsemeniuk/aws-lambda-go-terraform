@@ -1,4 +1,4 @@
-module go-lambda
+module aws-lambda-cloudwatch-go-terraform
 
 go 1.20
 
